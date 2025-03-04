@@ -1,0 +1,18 @@
+Base Case: No trains, no scheduling
+1 train, scheduled to station 0
+
+Inductive hypothesis:
+Given that for k train arrivals, greedyTrain is able to find the lowest
+number of stations needed to facilitate all trains.
+
+Inductive Step: 
+Assume that the solution k + 1 trains, our algorithm does NOT give the 
+optimal sol.
+
+We know for k trains our solution was optimal. for the next train that 
+is arriving, if our solution is any worse than the optimal solution, it 
+must append this train to a new track. But our algorithm can only do that 
+if all tracks are currently occupied. At the same time, it is impossible 
+for the optimal solution to append this new track to an existing 
+station since they are all full. therefore: optimal solution and the 
+greedyTrain algorithm is the same.
